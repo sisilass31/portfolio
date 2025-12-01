@@ -11,12 +11,14 @@
 /* DARK / LIGHT MODE VARIABLES */
 :root {
     --color-bg: #0a0a0a;
+    --color-bg-clear: #0a0a0a9e;
     --color-text: #ededed;
     --color-text-secondary: #b3b3b3;
     --color-surface: #121212;
     --color-border: rgba(255, 255, 255, 0.1);
     --color-accent: #e3670f;
     --color-accent-dark: #c0570c;
+    --color-accent-clear: rgba(227, 103, 15, 0.2);
     --moon: rgb(19, 19, 19);
     --sun: rgb(249 115 22);
     --green: #22c65f;
@@ -24,15 +26,11 @@
 
 [data-theme="light"] {
     --color-bg: #F2F4F7;
+    --color-bg-clear: #ffffffa7;
     --color-text: #1a1a1a;
     --color-text-secondary: #515151;
     --color-surface: #ffffff;
     --color-border: rgba(0, 0, 0, 0.12);
-    --color-accent: #e3670f;
-    --color-accent-dark: #c0570c;
-    --moon: rgb(19, 19, 19);
-    --sun: rgb(249 115 22);
-    --green: #22c65f;
 }
 
 .container {
@@ -197,8 +195,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
     max-width: 1024px;
     width: 95%;
     padding: 15px 25px;
@@ -212,7 +210,7 @@ header {
 
 .navbar-links {
     display: flex;
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-clear);
     padding: 0 5px;
     font-size: 12px;
     color: var(--color-text-secondary);
@@ -311,6 +309,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.mobile-menu-close:hover {
+    background-color: var(--color-accent);
 }
 
 .mobile-menu-close i {
@@ -472,7 +474,7 @@ header {
     inset: 0;
     z-index: 0;
     /* TA GRILLE + TES RADIAUX */
-    background-image: linear-gradient(to right, var(--color-border) 1px, transparent 1px), linear-gradient(to bottom, var(--color-border) 1px, transparent 1px), radial-gradient(circle 450px at 20% 100%, rgba(227, 103, 15, 0.4), transparent), radial-gradient(circle 450px at 100% 80%, rgba(192, 87, 12, 0.4), transparent);
+    background-image: linear-gradient(to right, var(--color-border) 1px, transparent 1px), linear-gradient(to bottom, var(--color-border) 1px, transparent 1px), radial-gradient(circle 450px at 20% 100%, var(--color-accent-clear), transparent), radial-gradient(circle 450px at 100% 80%, var(--color-accent-clear), transparent);
     background-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, transparent 100%);
@@ -661,3 +663,188 @@ header {
 .dispo i {
     color: var(--green);
 }
+
+/******************* FOOTER *******************/
+
+.footer-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+    height: 100dvh;
+}
+
+.footer-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1000;
+    background: linear-gradient(to top, transparent 40%, var(--color-accent-clear) 100%);
+}
+
+.footer-container h1 {
+    font-size: 8vw;
+    text-align: center;
+    line-height: 1;
+}
+
+.footer-container h1:hover {
+    letter-spacing: 4px;
+}
+
+.available {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    width: fit-content;
+    margin-top: auto;
+}
+
+.contact-card-wrapper {
+    width: 80%;
+    padding: 18px 30px;
+    border-radius: 15px;
+    background: var(--color-surface);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 20px;
+}
+
+.contact-card-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.contact-card-wrapper:active {
+    transform: scale(.985);
+}
+
+/* Text zone */
+.contact-card-info {
+    flex: 1;
+}
+
+.contact-card-title {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin: 0 0 6px 0;
+}
+
+.contact-card-email {
+    font-size: 3vw;
+    font-weight: 600;
+    color: var(--color-text);
+    word-break: break-all;
+}
+
+.contact-card-hint {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+}
+
+/* Button */
+.contact-card-copy-btn {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+.contact-card-wrapper:hover .contact-card-copy-btn {
+    background: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.contact-card-copy-btn:active {
+    transform: translateY(0);
+}
+
+/* Icons */
+.contact-card-icon-check {
+    display: none;
+}
+
+/* Pulse animation */
+.contact-card-pulse {
+    animation: cardPulse .6s ease;
+}
+
+#contactIconCheck {
+    display: none;
+}
+
+@keyframes cardPulse {
+    0% {
+        transform: scale(.9);
+        opacity: .7;
+    }
+
+    60% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 8px 15px;
+    width: 125px;
+    border-radius: 15px;
+}
+
+.social-media a:hover {
+    border: 1px solid var(--color-text);
+    transform: translateY(-8%);
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    margin-top: auto;
+}
+
+/******************* FOOTER *******************/

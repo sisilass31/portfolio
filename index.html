@@ -16,6 +16,7 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- boxicons (icônes) -->
     <link href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -61,7 +62,7 @@
                 <div class="navbar-logo title-font">
                     <a href="#">Sihem Lassar</a>
                 </div>
-                <button class="mobile-menu-close" id="closeMobileMenu" aria-label="Fermer le menu">
+                <button class="mobile-menu-close rounded-full" id="closeMobileMenu" aria-label="Fermer le menu">
                     <i class='bx bx-x'></i>
                 </button>
             </div>
@@ -129,11 +130,11 @@
                     <div class="line-grey"></div>
                     <div class="dispo-location">
                         <div class="dispo">
-                            <i class='bx  bx-radio-circle-marked'></i> 
+                            <i class='bx  bx-radio-circle-marked'></i>
                             <p class="uppercase color-grey">Disponible</p>
                         </div>
                         <div class="location">
-                            <i class='bx  bxs-location'></i> 
+                            <i class='bx  bxs-location'></i>
                             <p class="uppercase color-grey">Paris / IDF</p>
                         </div>
                     </div>
@@ -156,7 +157,43 @@
         </div>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="footer-container content border box-shadow">
+            <div class="available rounded-full">
+                <p>Disponible immédiatemment</p>
+            </div>
+            <h1 class="title-font">Envoyez-moi<br>un message</h1>
+            <!-- card email a copier -->
+
+            <div class="contact-card-wrapper border-hover" id="contactCard">
+
+                <div class="contact-card-info">
+                    <p class="contact-card-title">Me contacter par email</p>
+                    <p class="contact-card-email" id="contactEmail">lassarsihem31@gmail.com</p>
+                    <p class="contact-card-hint" id="contactHint">Clique pour copier</p>
+                </div>
+
+                <button class="contact-card-copy-btn rounded-full" id="contactCopyButton">
+                    <i id="contactIconCopy" class='bx bx-copy'></i>
+                    <i id="contactIconCheck" class='bx bx-check contact-card-icon-check'></i>
+                </button>
+
+            </div>
+            
+            <div class="copyright-container">
+                <div class="line-grey"></div>
+                <div class="copyright color-grey">
+                    <p>© 2025 Sihem Lassar</p>
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/sihem-lassar/"><i class='bxl  bx-linkedin'></i>Linkedin</a>
+                        <a href="https://github.com/sisilass31"><i class='bxl  bx-github'></i>Github</a>
+                        <a href="mailto:lassarsihem31@gmail.com"><i class='bxl  bx-gmail'></i>Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Custom cursor -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>

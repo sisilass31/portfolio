@@ -85,6 +85,15 @@
         cursor: auto;
         /* désactive le curseur personnalisé sur mobile */
     }
+
+    .contact-card-wrapper {
+        width: 90%;
+    }
+
+    .copyright {
+        flex-direction: column;
+        gap: 14px;
+    }
 }
 
 /* Mobiles */
@@ -95,6 +104,16 @@
 
     .navbar {
         width: 90%;
+    }
+
+    .social-media {
+        gap: 12px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .social-media a {
+        width: 100%;
     }
 }
 
@@ -120,5 +139,27 @@
     .cursor-outline {
         display: none;
         /* cache le curseur personnalisé */
+    }
+
+    .contact-card-wrapper {
+        width: 100%;
+    }
+
+    .footer-container h1 {
+        font-size: 10vw;
+    }
+
+    .contact-card-copy-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .contact-card-email {
+        font-size: 4vw;
+    }
+
+    .contact-card-wrapper {
+        padding: 20px;
     }
 }
