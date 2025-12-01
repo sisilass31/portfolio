@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de Sihem Lassar : projets web, développement full-stack / Conceptrice Développeuse D'applications web. Découvrez mes compétences et mes travaux.">
+    <title>Sihem Lassar | Portfolio</title>
+    <!-- favicon -->
+    <!-- <link rel="icon" type="image/png" href="./assets/images/favicon.png"> -->
+    <!-- style -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- particles -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- boxicons (icônes) -->
+    <link href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <!-- NAVBAR -->
+        <nav class="navbar box-shadow rounded-full">
+            <div class="navbar-logo title-font">
+                <a href="#">Sihem Lassar</a>
+            </div>
+
+            <!-- Nav links (desktop) -->
+            <ul class="navbar-links border rounded-full">
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#formations">Formations</a></li>
+                <li><a href="#atouts">Atouts</a></li>
+            </ul>
+
+            <!-- Actions / boutons -->
+            <div class="navbar-actions">
+                <!-- Light / Dark mode toggle -->
+                <button class="darkModeToggle rounded-full" aria-label="Changer mode sombre/clair">
+                    <i class='bx  bx-sun'></i>
+                </button>
+                <!-- Contact -->
+                <div class="btn-contact rounded-full">
+                    <a href="./pages/contact.html">Contact</a>
+                    <div class="dot-pulse rounded-full"></div>
+                </div>
+            </div>
+
+            <!-- Burger button (mobile) -->
+            <button class="navbar-burger" id="burgerBtn" aria-label="Ouvrir le menu">
+                <i class='bx bx-menu'></i>
+            </button>
+        </nav>
+
+        <!-- Mobile full screen menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="top-mobile-menu">
+                <div class="navbar-logo title-font">
+                    <a href="#">Sihem Lassar</a>
+                </div>
+                <button class="mobile-menu-close" id="closeMobileMenu" aria-label="Fermer le menu">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+
+            <ul class="mobile-menu-links title-font">
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#formations">Formations</a></li>
+                <li><a href="#atouts">Atouts</a></li>
+            </ul>
+
+            <div class="mobile-actions">
+                <div class="darkmode-container border">
+                    <p class="apparence">
+                        <i class='bx  bx-palette'></i>
+                        Apparence
+                    </p>
+                    <button class="darkModeToggle rounded-full border" aria-label="Changer mode sombre/clair">
+                        <i class='bx bx-sun'></i>
+                        <p>Clair</p>
+                    </button>
+                </div>
+                <div class="btn-contact-mobile">
+                    <a href="./pages/contact.html">Contact</a>
+                    <i class='bx  bx-arrow-right-stroke'></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <h1 class="title-name title-font">
+                Sihem<br>Lassar
+            </h1>
+            <div class="info-cv">
+                <div class="info-container">
+                    <p class="location-info"><i class='bx  bx-location-alt-2'></i>Basé à Romainville (93230)</p>
+                    <p>Mobile sur Paris & Île-de-France</p>
+                    <p>21 Ans</p>
+                </div>
+                <div class="cv-container rounded-full title-font">
+                    <a href="../assets/images/CV-Sihem-Lassar.pdf" download="CV-Sihem-Lassar.pdf"
+                        class="work-name work-name1 mt-30">
+                        Télécharger mon CV
+                    </a>
+                    <i class='bx  bx-arrow-down-right-stroke'></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="about-container" id="apropos">
+                <div class="left-about">
+                    <div class="card-me border-hover">
+                        <div class="card-me-name">
+                            <h3 class="title-font">Sihem Lassar</h3>
+                            <div class="text-line">
+                                <div class="line"></div>
+                                <p class="color-grey">Développeuse web</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line-grey"></div>
+                    <div class="dispo-location">
+                        <div class="dispo">
+                            <i class='bx  bx-radio-circle-marked'></i> 
+                            <p class="uppercase color-grey">Disponible</p>
+                        </div>
+                        <div class="location">
+                            <i class='bx  bxs-location'></i> 
+                            <p class="uppercase color-grey">Paris / IDF</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-about">
+                    <div class="title-about">
+                        <div class="text-line">
+                            <div class="line"></div>
+                            <h3>À propos</h3>
+                        </div>
+                        <h2 class="subtitle-about">INNOVATION DIGITALE. PENSÉE STRATÉGIQUE.</h2>
+                    </div>
+                    <p class="text-about">Après avoir obtenu un <span class="title-font-v2">Bac +2 en développement
+                            web</span>, je poursuis actuellement un <span class="title-font-v2">Bac +3 chez
+                            DesCodeuses</span>. Curieuse et déterminée, je suis constamment à la recherche de nouvelles
+                        opportunités pour perfectionner mes compétences et relever de nouveaux défis dans le domaine du
+                        développement web. </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+    <!-- Custom cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <!-- script js -->
+    <script src="./assets/js/cursor.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+/* ===================== */
+/* RESPONSIVE GLOBAL     */
+/* ===================== */
+
+/* Medium screens */
+@media screen and (max-width: 1050px) {
+    .text-about {
+        font-size: 1.5rem;
+    }
+}
+
+/* Large tablets / small desktops */
+@media screen and (max-width: 950px) {
+    #burgerBtn {
+        display: flex;
+    }
+
+    .navbar-links,
+    .navbar-actions {
+        display: none;
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-me,
+    .info-about {
+        width: 100%;
+    }
+
+    .subtitle-about {
+        font-size: 2.5rem;
+    }
+
+    .text-about {
+        font-size: 1rem;
+    }
+}
+
+/* Small tablets / large mobiles */
+@media screen and (max-width: 700px) {
+    .info-cv {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .cv-container {
+        width: 100%;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+
+    .info-container {
+        font-size: 14px;
+    }
+
+    .title-name {
+        font-size: 20vw;
+        letter-spacing: 2px;
+        text-align: start;
+        width: 100%;
+        line-height: 1;
+    }
+
+    .title-name:hover {
+        letter-spacing: 5px;
+    }
+
+    .hero-section {
+        padding: 20px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    body {
+        cursor: auto;
+        /* désactive le curseur personnalisé sur mobile */
+    }
+}
+
+/* Mobiles */
+@media screen and (max-width: 600px) {
+    .mobile-menu-links.title-font {
+        font-size: 32px;
+    }
+
+    .navbar {
+        width: 90%;
+    }
+}
+
+/* Small mobiles */
+@media screen and (max-width: 500px) {
+    .subtitle-about {
+        font-size: 2rem;
+    }
+
+    .text-about {
+        font-size: 1.2rem;
+    }
+
+    .card-me-name h3 {
+        font-size: 28px;
+    }
+
+    .title-about {
+        margin-bottom: 0;
+    }
+
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+        /* cache le curseur personnalisé */
+    }
+}
