@@ -18,7 +18,7 @@
     --color-border: rgba(255, 255, 255, 0.1);
     --color-accent: #e3670f;
     --color-accent-dark: #c0570c;
-    --color-accent-clear: rgba(227, 103, 15, 0.2);
+    --color-accent-clear: rgba(227, 103, 15, 0.5);
     --moon: rgb(19, 19, 19);
     --sun: rgb(249 115 22);
     --green: #22c65f;
@@ -55,6 +55,11 @@ body {
     font-family: 'Satoshi', sans-serif;
     letter-spacing: 0.5px;
 }
+
+.section {
+    scroll-margin-top: 150px;
+}
+
 
 /* Sélection standard */
 ::selection {
@@ -121,7 +126,7 @@ button {
 }
 
 .border-hover:hover {
-    border: 1px solid var(--color-accent);
+    border: 1px solid var(--color-accent-clear);
 }
 
 .rounded-full {
@@ -133,7 +138,11 @@ button {
 }
 
 .color-grey {
-    color: var(--color-text);
+    color: var(--color-text-secondary);
+}
+
+.color-orange {
+    color: var(--color-accent);
 }
 
 .uppercase {
@@ -629,7 +638,7 @@ header {
     width: 30px;
 }
 
-.subtitle-about {
+.subtitle {
     font-size: 3rem;
     line-height: 1.1;
     margin-top: 8px;
@@ -663,6 +672,103 @@ header {
 .dispo i {
     color: var(--green);
 }
+/* ATOUTS */
+.card-atouts {
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 30%;
+    min-width: 300px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.card-atouts:hover {
+    transform: scale(1.02);
+}
+
+.cards-atouts-container .box-shadow:hover {
+    box-shadow: var(--color-accent-clear) 0px 0px 12px 0px, var(--color-accent) 0px 0px 0px 1px;
+}
+
+.icon-atouts {
+    font-size: 28px;
+    border-radius: 10px;
+    padding: 8px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+    transition: color 0.3s, border 0.3s;
+}
+
+.card-atouts:hover .icon-atouts {
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+}
+
+.card-atouts:hover .name-atouts {
+    letter-spacing: 3px;
+}
+
+.subtitle-atouts {
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.name-atouts {
+    font-size: 26px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.name-atouts::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-accent);
+    transition: width 0.8s;
+}
+
+.card-atouts:hover .name-atouts::after {
+    width: 100%;
+}
+
+.cards-atouts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.atouts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.title-atout {
+    text-align: center;
+}
+
+.title-atout h3 {
+    padding-top: 10px;
+}
+/* ATOUTS */
+
 
 /******************* FOOTER *******************/
 
