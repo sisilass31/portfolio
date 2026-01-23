@@ -2,35 +2,35 @@
 const darkModeButtons = document.querySelectorAll(".darkModeToggle");
 
 function updateIcons(theme) {
-  darkModeButtons.forEach(btn => {
-    const icon = btn.querySelector("i");
-    const text = btn.querySelector("p");
+    darkModeButtons.forEach(btn => {
+        const icon = btn.querySelector("i");
+        const text = btn.querySelector("p");
 
-    if (theme === "dark") {
-      // Thème sombre actif → bouton montre SUN = aller vers clair
-      icon.classList.remove("bx-moon");
-      icon.classList.add("bx-sun");
+        if (theme === "dark") {
+            // Thème sombre actif → bouton montre SUN = aller vers clair
+            icon.classList.remove("bx-moon");
+            icon.classList.add("bx-sun");
 
-      if (text) text.textContent = "Clair";
-    } else {
-      // Thème clair actif → bouton montre MOON = aller vers sombre
-      icon.classList.remove("bx-sun");
-      icon.classList.add("bx-moon");
+            if (text) text.textContent = "Clair";
+        } else {
+            // Thème clair actif → bouton montre MOON = aller vers sombre
+            icon.classList.remove("bx-sun");
+            icon.classList.add("bx-moon");
 
-      if (text) text.textContent = "Sombre";
-    }
-  });
+            if (text) text.textContent = "Sombre";
+        }
+    });
 }
 
 
 function toggleTheme() {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-  const newTheme = currentTheme === "light" ? "dark" : "light";
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "light" ? "dark" : "light";
 
-  document.documentElement.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
 
-  updateIcons(newTheme);
+    updateIcons(newTheme);
 }
 
 // Clic sur tous les boutons
@@ -38,9 +38,9 @@ darkModeButtons.forEach(btn => btn.addEventListener("click", toggleTheme));
 
 // Charger le thème sauvegardé
 document.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme") || "dark"; // Default darkmode
-  document.documentElement.setAttribute("data-theme", savedTheme);
-  updateIcons(savedTheme);
+    const savedTheme = localStorage.getItem("theme") || "dark"; // Default darkmode
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    updateIcons(savedTheme);
 });
 
 // ----- MENU MOBILE -----
@@ -120,9 +120,25 @@ function showFeedback() {
 }
 
 // Sur le bouton ET sur la carte
-btn.addEventListener("click", function(e){
+btn.addEventListener("click", function (e) {
     e.stopPropagation(); // éviter double événement
     copyEmail();
 });
 
 card.addEventListener("click", copyEmail);
+
+// CV
+
+const toggle = document.getElementById("cvToggle");
+const options = document.querySelector(".cv-options");
+
+toggle.addEventListener("click", () => {
+    options.style.display =
+        options.style.display === "flex" ? "none" : "flex";
+});
+
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".cv-download")) {
+        options.style.display = "none";
+    }
+});

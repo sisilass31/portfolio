@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,9 @@
 </head>
 
 <body>
-    <header>
+    <!-- Background particles -->
+    <div class="finisher-header"></div>
+    <header class="content">
         <!-- NAVBAR -->
         <nav class="navbar box-shadow rounded-full">
             <div class="navbar-logo title-font">
@@ -87,7 +89,7 @@
                     </button>
                 </div>
                 <div class="btn-contact-mobile">
-                    <a href="#contact"">Contact</a>
+                    <a href="#contact">Contact</a>
                     <i class='bx  bx-arrow-right-stroke'></i>
                 </div>
             </div>
@@ -101,17 +103,29 @@
             </h1>
             <div class="info-cv">
                 <div class="info-container">
-                    <p class="location-info"><i class='bx  bx-location-alt-2'></i>Basé à Romainville (93230)</p>
+                    <p class="location-info"><i class='bx  bx-location-alt-2'></i>Basé à Romainville (93230)
+                    </p>
                     <p>Mobile sur Paris & Île-de-France</p>
                     <p>21 Ans</p>
                 </div>
-                <div class="cv-container rounded-full title-font">
-                    <a href="../assets/images/CV-Sihem-Lassar.pdf" download="CV-Sihem-Lassar.pdf"
-                        class="work-name work-name1 mt-30">
-                        Télécharger mon CV
-                    </a>
-                    <i class='bx  bx-arrow-down-right-stroke'></i>
+                <div class="cv-container rounded-full">
+                    <div class="cv-download title-font" id="cvToggle">
+                        <span>Télécharger mon CV</span>
+                        <div class="icon-arrow-cv">
+                            <i class='bx bx-arrow-down-right-stroke'></i>
+                        </div>
+                    </div>
+
+                    <div class="cv-options box-shadow">
+                        <a href="./assets/cv/CV-Sihem-Lassar-light.pdf" download="CV-Sihem-Lassar-Light.pdf">
+                            Version Light <i class='bx bx-sun'></i>
+                        </a>
+                        <a href="./assets/cv/CV-Sihem-Lassar-dark.pdf" download="CV-Sihem-Lassar-Dark.pdf">
+                            Version Dark <i class='bx bx-moon'></i>
+                        </a>
+                    </div>
                 </div>
+
             </div>
         </div>
 
@@ -145,12 +159,15 @@
                             <div class="line"></div>
                             <h3>À propos</h3>
                         </div>
-                        <h2 class="subtitle">INNOVATION DIGITALE. PENSÉE STRATÉGIQUE.</h2>
+                        <h2 class="subtitle title-font">INNOVATION DIGITALE. PENSÉE STRATÉGIQUE.</h2>
                     </div>
-                    <p class="text-about">Après avoir obtenu un <span class="title-font-v2">Bac +2 en développement
+                    <p class="text-about">Après avoir obtenu un <span class="title-font-v2">Bac +2 en
+                            développement
                             web</span>, je poursuis actuellement un <span class="title-font-v2">Bac +3 chez
-                            DesCodeuses</span>. Curieuse et déterminée, je suis constamment à la recherche de nouvelles
-                        opportunités pour perfectionner mes compétences et relever de nouveaux défis dans le domaine du
+                            DesCodeuses</span>. Curieuse et déterminée, je suis constamment à la recherche de
+                        nouvelles
+                        opportunités pour perfectionner mes compétences et relever de nouveaux défis dans le
+                        domaine du
                         développement web. </p>
                 </div>
             </div>

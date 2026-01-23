@@ -14,7 +14,7 @@
 }
 
 /* Large tablets / small desktops */
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1060px) {
     #burgerBtn {
         display: flex;
     }
@@ -149,9 +149,6 @@
         font-size: 32px;
     }
 
-    .navbar {
-        width: 90%;
-    }
 
     .social-media {
         gap: 12px;
