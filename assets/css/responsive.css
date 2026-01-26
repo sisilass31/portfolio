@@ -4,7 +4,7 @@
 
 /* Medium screens */
 @media screen and (max-width: 1085px) {
-  .text-about {
+  .text-title {
     font-size: 1.5rem;
   }
 
@@ -32,7 +32,9 @@
   button {
     cursor: inherit !important;
   }
-
+  .line2 {
+    display: flex;
+  }
   .about-container {
     flex-direction: column;
     gap: 10px;
@@ -47,12 +49,13 @@
     font-size: 2.5rem;
   }
 
-  .text-about {
+  .text-title {
     font-size: 1rem;
   }
 
-  .title-atout {
+  .text-align-center-start {
     text-align: start;
+    justify-content: start;
     width: 100%;
   }
 
@@ -197,7 +200,7 @@
     font-size: 2rem;
   }
 
-  .text-about {
+  .text-title {
     font-size: 1.2rem;
   }
 
