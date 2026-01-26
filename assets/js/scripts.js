@@ -142,3 +142,43 @@ document.addEventListener("click", (e) => {
         options.style.display = "none";
     }
 });
+
+// cards competences
+const cards = document.querySelectorAll('.competence-card');
+
+function isMobile() {
+  return window.matchMedia('(max-width: 768px)').matches;
+}
+
+function openCard(target) {
+  cards.forEach(card => {
+    if (card !== target) {
+      card.classList.remove('active');
+    }
+  });
+  target.classList.add('active');
+}
+
+function toggleCard(card) {
+  card.classList.toggle('active');
+}
+
+cards.forEach(card => {
+  const header = card.querySelector('.competence-header');
+
+  // 🖥️ DESKTOP → hover ouvre (jamais toggle)
+  header.addEventListener('mouseenter', () => {
+    if (!isMobile()) {
+      openCard(card);
+    }
+  });
+
+  // 📱 MOBILE → click toggle (ouvre / ferme)
+  header.addEventListener('click', () => {
+    if (isMobile()) {
+      toggleCard(card);
+    } else {
+      openCard(card);
+    }
+  });
+});

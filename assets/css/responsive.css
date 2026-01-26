@@ -4,212 +4,227 @@
 
 /* Medium screens */
 @media screen and (max-width: 1085px) {
-    .text-about {
-        font-size: 1.5rem;
-    }
+  .text-about {
+    font-size: 1.5rem;
+  }
 
-    .card-atouts {
-        width: calc(50% - 18px);
-    }
+  .card-atouts {
+    width: calc(50% - 18px);
+  }
 }
 
 /* Large tablets / small desktops */
 @media screen and (max-width: 1060px) {
-    #burgerBtn {
-        display: flex;
-    }
+  #burgerBtn {
+    display: flex;
+  }
 
-    .navbar-links,
-    .navbar-actions {
-        display: none;
-    }
+  .navbar-links,
+  .navbar-actions {
+    display: none;
+  }
 }
 
 /* Tablets */
 @media screen and (max-width: 900px) {
-    .about-container {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .about-container {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .card-me,
-    .info-about {
-        width: 100%;
-    }
+  .card-me,
+  .info-about {
+    width: 100%;
+  }
 
-    .subtitle {
-        font-size: 2.5rem;
-    }
+  .subtitle {
+    font-size: 2.5rem;
+  }
 
-    .text-about {
-        font-size: 1rem;
-    }
+  .text-about {
+    font-size: 1rem;
+  }
 
-    .title-atout {
-        text-align: start;
-        width: 100%;
-    }
+  .title-atout {
+    text-align: start;
+    width: 100%;
+  }
 
-    .atouts-container {
-        padding: 30px 0;
-    }
+  .atouts-container {
+    padding: 30px 0;
+  }
+
+  .competences-container {
+    gap: 5px;
+    flex-direction: column;
+  }
+
+  .title-competences {
+    width: 100%;
+  }
+
+  .competences-cards {
+    width: 100%;
+  }
+  .competence-title {
+    font-size: 30px;
+  }
 }
 
 /* Small tablets / large mobiles */
 @media screen and (max-width: 750px) {
-    .info-cv {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 20px;
-        padding: 0 20px;
-    }
+  .info-cv {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
 
-    .cv-container {
-        width: 100%;
-        justify-content: space-between;
-        font-size: 14px;
-    }
+  .cv-container {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+  }
 
-    .info-container {
-        font-size: 14px;
-    }
+  .info-container {
+    font-size: 14px;
+  }
 
-    .title-name {
-        font-size: 20vw;
-        letter-spacing: 2px;
-        text-align: start;
-        width: 100%;
-        line-height: 1;
-    }
+  .title-name {
+    font-size: 20vw;
+    letter-spacing: 2px;
+    text-align: start;
+    width: 100%;
+    line-height: 1;
+  }
 
-    .title-name:hover {
-        letter-spacing: 5px;
-    }
+  .title-name:hover {
+    letter-spacing: 5px;
+  }
 
-    .hero-section {
-        padding: 20px;
-    }
+  .hero-section {
+    padding: 20px;
+  }
 
-    .content {
-        padding: 20px;
-    }
+  .content {
+    padding: 20px;
+    gap: 20px;
+  }
+  .padding {
+    padding: 20px;
+  }
 
-    body {
-        cursor: auto;
-        /* désactive le curseur personnalisé sur mobile */
-    }
+  body {
+    cursor: auto;
+    /* désactive le curseur personnalisé sur mobile */
+  }
 
-    .contact-card-wrapper {
-        width: 90%;
-    }
+  .contact-card-wrapper {
+    width: 90%;
+  }
 
-    .copyright {
-        flex-direction: column;
-        gap: 14px;
-    }
+  .copyright {
+    flex-direction: column;
+    gap: 14px;
+  }
 
+  .cards-atouts-container {
+    gap: 16px;
+  }
 
-    .cards-atouts-container {
-        gap: 16px;
-    }
+  .name-atouts {
+    font-size: 14px;
+  }
 
-    .name-atouts {
-        font-size: 14px;
-    }
+  .subtitle-atouts {
+    font-size: 10px;
+    padding-top: 9px;
+  }
 
-    .subtitle-atouts {
-        font-size: 10px;
-        padding-top: 9px;
-    }
+  .card-atouts {
+    gap: 5px;
+  }
 
-    .card-atouts {
-        gap: 5px;
-    }
+  .card-atouts {
+    min-width: auto;
+  }
 
-    .card-atouts {
-        min-width: auto;
-    }
+  .icon-atouts {
+    font-size: 18px;
 
-    .icon-atouts {
-        font-size: 18px;
+    width: 35px;
+    height: 35px;
+  }
 
-        width: 35px;
-        height: 35px;
-    }
-
-    .card-atouts {
-        width: calc(50% - 8px);
-    }
-
+  .card-atouts {
+    width: calc(50% - 8px);
+  }
 }
 
 /* Mobiles */
 @media screen and (max-width: 600px) {
-    .mobile-menu-links.title-font {
-        font-size: 32px;
-    }
+  .mobile-menu-links.title-font {
+    font-size: 32px;
+  }
 
+  .social-media {
+    gap: 12px;
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .social-media {
-        gap: 12px;
-        flex-direction: column;
-        width: 100%;
-    }
+  .social-media a {
+    width: 100%;
+  }
 
-    .social-media a {
-        width: 100%;
-    }
-
-    .card-atouts {
-        padding: 15px;
-    }
-
+  .card-atouts {
+    padding: 15px;
+  }
 }
 
 /* Small mobiles */
 @media screen and (max-width: 500px) {
-    .subtitle {
-        font-size: 2rem;
-    }
+  .subtitle {
+    font-size: 2rem;
+  }
 
-    .text-about {
-        font-size: 1.2rem;
-    }
+  .text-about {
+    font-size: 1.2rem;
+  }
 
-    .card-me-name h3 {
-        font-size: 28px;
-    }
+  .card-me-name h3 {
+    font-size: 28px;
+  }
 
-    .title-about {
-        margin-bottom: 0;
-    }
+  .title-section {
+    margin-bottom: 0;
+  }
 
-    .cursor-dot,
-    .cursor-outline {
-        display: none;
-        /* cache le curseur personnalisé */
-    }
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
+    /* cache le curseur personnalisé */
+  }
 
-    .contact-card-wrapper {
-        width: 100%;
-    }
+  .contact-card-wrapper {
+    width: 100%;
+  }
 
-    .footer-container h1 {
-        font-size: 10vw;
-    }
+  .footer-container h1 {
+    font-size: 10vw;
+  }
 
-    .contact-card-copy-btn {
-        width: 38px;
-        height: 38px;
-        font-size: 20px;
-    }
+  .contact-card-copy-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
 
-    .contact-card-email {
-        font-size: 4vw;
-    }
+  .contact-card-email {
+    font-size: 4vw;
+  }
 
-    .contact-card-wrapper {
-        padding: 20px;
-    }
-
+  .contact-card-wrapper {
+    padding: 20px;
+  }
 }
