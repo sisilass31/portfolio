@@ -143,13 +143,18 @@ document.addEventListener("click", (e) => {
     }
 });
 
-// cards competences
+
+
+
+
+// Sélection des cartes
 const cards = document.querySelectorAll('.competence-card');
 
 function isMobile() {
   return window.matchMedia('(max-width: 768px)').matches;
 }
 
+// Ouvre une carte et ferme les autres
 function openCard(target) {
   cards.forEach(card => {
     if (card !== target) {
@@ -159,24 +164,34 @@ function openCard(target) {
   target.classList.add('active');
 }
 
-function toggleCard(card) {
-  card.classList.toggle('active');
+// Toggle une carte (mobile)
+function toggleCardMobile(target) {
+  const isActive = target.classList.contains('active');
+
+  // Ferme toutes les autres cartes
+  cards.forEach(card => card.classList.remove('active'));
+
+  // Si elle n'était pas active, on l'active
+  if (!isActive) {
+    target.classList.add('active');
+  }
 }
 
+// Événements sur chaque carte
 cards.forEach(card => {
   const header = card.querySelector('.competence-header');
 
-  // 🖥️ DESKTOP → hover ouvre (jamais toggle)
+  // Desktop → hover
   header.addEventListener('mouseenter', () => {
     if (!isMobile()) {
       openCard(card);
     }
   });
 
-  // 📱 MOBILE → click toggle (ouvre / ferme)
+  // Mobile → click toggle
   header.addEventListener('click', () => {
     if (isMobile()) {
-      toggleCard(card);
+      toggleCardMobile(card);
     } else {
       openCard(card);
     }
