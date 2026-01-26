@@ -168,7 +168,7 @@ button {
 body,
 a,
 button {
-  cursor: none;
+  cursor: none !important;
 }
 
 .cursor-dot,
@@ -180,7 +180,10 @@ button {
   border-radius: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  transition: none !important;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+  mix-blend-mode: difference;
 }
 
 .cursor-dot {
@@ -192,8 +195,22 @@ button {
 .cursor-outline {
   width: 30px;
   height: 30px;
-  border: 1px solid var(--color-accent);
+  border: 2px solid var(--color-accent); 
+  background: transparent;
+  opacity: 0.8;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    border-color 0.2s ease;
+  will-change: transform;
 }
+
+/* Hover effect */
+.cursor-hover .cursor-dot {
+  width: 55px;
+  height: 55px;
+}
+
 
 /* CURSOR */
 
@@ -228,14 +245,20 @@ header {
 .navbar-links {
   display: flex;
   background-color: var(--color-bg-clear);
-  padding: 0 5px;
   font-size: 12px;
   color: var(--color-text-secondary);
   font-weight: 500;
 }
 
-.navbar-links li {
+.navbar-links li a {
+  display: block;
   padding: 12px 18px;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+}
+
+.navbar-links li a:hover {
+  color: var(--color-accent);
 }
 
 .navbar-links li:hover {
@@ -542,10 +565,6 @@ header {
   line-height: 0.8;
   text-align: center;
   letter-spacing: 10px;
-}
-
-.title-name:hover {
-  letter-spacing: -2px;
 }
 
 .info-cv {
