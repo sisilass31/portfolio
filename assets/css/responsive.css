@@ -159,6 +159,9 @@
   .card-atouts {
     width: calc(50% - 8px);
   }
+  .section {
+  scroll-margin-top: 120px;
+}
 }
 
 /* Mobiles */

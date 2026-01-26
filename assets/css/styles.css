@@ -195,7 +195,7 @@ button {
 .cursor-outline {
   width: 30px;
   height: 30px;
-  border: 2px solid var(--color-accent); 
+  border: 2px solid var(--color-accent);
   background: transparent;
   opacity: 0.8;
   transition:
@@ -210,7 +210,6 @@ button {
   width: 55px;
   height: 55px;
 }
-
 
 /* CURSOR */
 
@@ -795,6 +794,13 @@ header {
 
 .title-competences {
   width: 40%;
+}
+
+.title-competences .title-section {
+  margin-top: 30px;
+}
+.title-competences .subtitle {
+  margin-top: 15px;
 }
 
 .competences-cards {
