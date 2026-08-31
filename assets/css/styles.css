@@ -16,7 +16,7 @@
   --color-text-secondary: #b3b3b3;
   --color-surface: #121212;
   --color-border: rgba(255, 255, 255, 0.1);
-  --color-accent: #e3670f;
+  --color-accent: #ff6200;
   --color-accent-dark: #c0570c;
   --color-accent-clear: rgba(227, 103, 15, 0.5);
   --moon: rgb(19, 19, 19);
@@ -582,6 +582,9 @@ header {
   letter-spacing: 10px;
 }
 
+.title-name:hover {
+  letter-spacing: 4px;
+}
 .info-cv {
   position: absolute;
   bottom: 20px;
@@ -816,7 +819,7 @@ header {
 }
 
 .formation-card {
-  background-color: var(--color-surface);
+  background-color: var(--color);
   border-radius: 12px;
   padding: 20px;
 }
@@ -838,7 +841,7 @@ header {
 .stages p {
   margin: 8px 0;
   padding-left: 10px;
-  border-left: 2px solid #e3670f;
+  border-left: 2px solid #ff6200;
   font-size: 0.95rem;
 }
 
